@@ -9,9 +9,6 @@ public class ClosestPalindrome {
 
     public String nearestPalindromic(String n) {
         int num = Integer.parseInt(n);
-        StringBuilder sb ;
-        String str="";
-        String revStr="";
         if(num<10 && num>0) return Integer.toString(num-1);
         else{
             //Change the implementation
