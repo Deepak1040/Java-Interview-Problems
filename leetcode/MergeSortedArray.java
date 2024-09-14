@@ -1,4 +1,4 @@
-package LeetCode150;
+package leetcode;
 
 public class MergeSortedArray {
     
