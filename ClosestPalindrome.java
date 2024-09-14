@@ -14,13 +14,7 @@ public class ClosestPalindrome {
         String revStr="";
         if(num<10 && num>0) return Integer.toString(num-1);
         else{
-            while(num>0){
-                sb=new StringBuilder(String.valueOf(--num));
-                str=sb.toString();
-                revStr=sb.reverse().toString();
-                if(str.equals(revStr))
-                    return str;
-            }
+            //Change the implementation
         }
         return "0";
     }
