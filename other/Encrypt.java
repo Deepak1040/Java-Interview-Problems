@@ -1,3 +1,4 @@
+package other;
 //import java.util.regex.Pattern;
 
 public class Encrypt {
