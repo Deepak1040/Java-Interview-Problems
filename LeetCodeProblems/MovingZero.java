@@ -1,4 +1,4 @@
-package other;
+package LeetCodeProblems;
 public class MovingZero {
     public static void main(String Args[])
     {
