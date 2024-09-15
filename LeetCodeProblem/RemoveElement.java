@@ -1,8 +1,5 @@
-package LeetCodeProblems;
 
 // 27 Remove Element
-
-
 public class RemoveElement {
     public static void main(String[] args) {
         int nums1[]={3,2,2,3};
