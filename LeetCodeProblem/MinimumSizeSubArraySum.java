@@ -9,9 +9,18 @@ public class MinimumSizeSubArraySum {
     }
     public static int minSubArrayLen(int target, int[] nums) {
         
-        int sum=0;
-        int count=0,max_count=0;
-        
-        return 0;
+        int left = 0, right, sumOfCurrentWindow = 0;
+        int res = Integer.MAX_VALUE;
+
+        for(right = 0; right < nums.length; right++) {
+            sumOfCurrentWindow += nums[right];
+
+            while (sumOfCurrentWindow >= target) {
+                res = Math.min(res, right - left + 1);
+                sumOfCurrentWindow -= nums[left++];
+            }
+        }
+
+        return res == Integer.MAX_VALUE ? 0 : res;
     }
 }

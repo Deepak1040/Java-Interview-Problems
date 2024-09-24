@@ -11,18 +11,27 @@ public class LengthOfLongestSubString {
     }
 
     public static int lengthOfLongestSubstring(String s) {
-        HashSet<String> list=new HashSet<>(); 
-        for(int i=0;i<s.length();i++) {
-            for(int j=0;j<s.length();j++) {
-                for(int k=i;k<j;k++) {
-                    list.add(s.substring(i, j));
-                }
-            }
-        }
+        int left = 0, right = 0;
+        int size = 0, max = 0;
+        HashSet<Character> set = new HashSet<>();
 
-        for (String string : list) {
-            System.out.println(string);
+        while (right < s.length()) {
+            if (set.contains(s.charAt(right))) {
+                while(s.charAt(left) != s.charAt(right)){
+                    set.remove(s.charAt(left));
+                    left++;
+                    size--;
+                }
+                left ++;
+            }
+            else{
+                size++;
+                set.add(s.charAt(right));
+            }
+            
+            right++;
+            max = max < size ? size : max;
         }
-        return 0;
+        return max;
     }
 }
