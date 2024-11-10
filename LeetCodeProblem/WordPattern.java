@@ -20,9 +20,6 @@ public class WordPattern {
         }
         System.out.println(map.entrySet());
         System.out.println(map.size());
-        if(map.size()==1 || map.size()%2==0)
-            return  true;
-        else
-            return false;
+        return map.size()==1 || map.size()%2==0;
     }
 }
