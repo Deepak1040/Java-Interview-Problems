@@ -1,5 +1,5 @@
 
-import java.util.*;
+import java.util.HashMap;
 
 
 //290 Word Pattern 
@@ -12,16 +12,17 @@ public class WordPattern {
 
     public static boolean wordPattern(String pattern, String s) {
         
-        String array[]=s.split(" ");
-        int index=0;
-        Map<String,String> map =new TreeMap<>();
-        for (var str : array) {
-            map.put(String.valueOf(pattern.charAt(index++)), str);
+        HashMap<Character,String> map= new HashMap<>();
+        String word[]=s.split(" ");
+        int i=0;
+        for(char c:pattern.toCharArray()){
+            map.put(c, word[i++]);
         }
-        for (Map.Entry<String,String> a : map.entrySet()) {
-            System.out.println(a.getKey()+" "+a.getValue());
-        }
-        
-        return true;
+        System.out.println(map.entrySet());
+        System.out.println(map.size());
+        if(map.size()==1 || map.size()%2==0)
+            return  true;
+        else
+            return false;
     }
 }
