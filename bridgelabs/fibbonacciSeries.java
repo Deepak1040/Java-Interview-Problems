@@ -8,6 +8,7 @@ public class fibbonacciSeries {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+        
         /* System.out.println("Enter The number:");
     
         int size=sc.nextInt();
